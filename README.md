@@ -38,6 +38,8 @@ Options:
   --master-url               Internal master address proxy will authenticate against for oauth/bearer
                                                           [default: "https://kubernetes.default.svc.cluster.local:8443"]
   --master-ca                CA certificate(s) file to validate connection to the master   [default: "secret/master-ca"]
+  --scope                    OAuth request scope(s) to use with "oauth2" method'
+                                                             [default: "user:info,user:check-access,user:list-projects"]
   --transform                Transform name(s) to apply to the request/response after authentication [choices: "
                              user_header", "token_header", "none"]                              [default: "user_header"]
   --user-header              Header for sending user name on the proxied request        [default: "X-Proxy-Remote-User"]
