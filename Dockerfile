@@ -2,6 +2,8 @@ FROM node:6
 
 MAINTAINER OpenShift Development <dev@lists.openshift.redhat.com>
 
+RUN apt-get update && apt-get upgrade && rm -rf /var/lib/apt/lists/*
+
 ENV APP_DIR=/opt/openshift-auth-proxy
 
 COPY . ${APP_DIR}
