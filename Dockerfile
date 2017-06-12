@@ -8,7 +8,9 @@ COPY . ${APP_DIR}
 
 USER root
 
-RUN cd ${APP_DIR} && \
+RUN yum update -y && \
+    yum clean all && \
+    cd ${APP_DIR} && \
     scl enable rh-nodejs6 "npm install"
 
 USER 1001
