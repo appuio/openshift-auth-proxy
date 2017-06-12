@@ -17,4 +17,4 @@ USER 1001
 
 WORKDIR ${APP_DIR}
 
-ENTRYPOINT ["/opt/openshift-auth-proxy/run.sh"]
+CMD ["/opt/openshift-auth-proxy/run.sh"]
