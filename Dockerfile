@@ -12,7 +12,7 @@ RUN yum update -y && \
     yum clean all && \
     cd ${APP_DIR} && \
     scl enable rh-nodejs4 "npm install" && \
-    fix-perms ${HOME}
+    chown -R 1001:0 /opt/app-root && chmod -R ug+rwx /opt/app-root
 
 USER 1001
 
