@@ -42,4 +42,4 @@ cd "${APP_DIR}"
 echo "Using NODE_OPTIONS: '${NODE_OPTIONS}' Memory setting is in MB"
 echo "Running from directory: '$(pwd)'"
 
-exec node ${NODE_OPTIONS} /opt/rh/rh-nodejs6/root/bin/npm start
+exec node ${NODE_OPTIONS} /opt/rh/rh-nodejs4/root/bin/npm start
