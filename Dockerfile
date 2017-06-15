@@ -11,7 +11,7 @@ USER root
 RUN yum update -y && \
     yum clean all && \
     cd ${APP_DIR} && \
-    scl enable rh-nodejs6 "npm install" && \
+    scl enable rh-nodejs4 "npm install" && \
     fix-perms ${HOME}
 
 USER 1001
