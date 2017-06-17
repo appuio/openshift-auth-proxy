@@ -42,4 +42,8 @@ cd "${APP_DIR}"
 echo "Using NODE_OPTIONS: '${NODE_OPTIONS}' Memory setting is in MB"
 echo "Running from directory: '$(pwd)'"
 
-exec node ${NODE_OPTIONS} /opt/rh/rh-nodejs4/root/bin/npm start
+set +u
+unset BASH_ENV PROMPT_COMMAND ENV
+source scl_source enable nodejs010
+
+exec node ${NODE_OPTIONS} /opt/rh/nodejs010/root/bin/npm start
